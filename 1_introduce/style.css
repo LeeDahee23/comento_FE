@@ -1,0 +1,116 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-blue);
+  --color-primary-variant: var(--color-navy);
+  --color-accent: var(--color-yellow);
+  --color-text: var(--color-black);
+
+  /* Colors */
+  --color-blue: #3260e4;
+  --color-white: #ffffff;
+  --color-navy: #182e6c;
+  --color-black: #000220;
+  --color-gray: #e6e6e6;
+  --color-yellow: #ffc03c;
+}
+
+/* Basic Setting */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/* home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 5rem 1rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 350px;
+  height: 350px;
+}
+.home__title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px var(--color-primary-variant);
+}
+.home__title--strong {
+  color: var(--color-accent);
+}
+
+/* About */
+#about {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  gap: 8rem;
+}
+
+.about__avatar {
+  width: 300px;
+  height: 300px;
+  margin: auto 0;
+}
+
+.title {
+  color: var(--color-primary-variant);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.descriptions {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-gray);
+  padding: 1rem;
+  width: 600px;
+  border-radius: 0.5rem;
+}
+.description {
+  display: flex;
+  height: 2.5rem;
+  gap: 1rem;
+}
+
+.description i {
+  font-size: 1.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: var(--color-primary-variant);
+}
+
+.description p {
+  font-size: 1.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.description--bold {
+  font-weight: 600;
+  color: var(--color-primary-variant);
+}
