@@ -1,0 +1,154 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-yellow);
+  --color-primary-variant: var(--color-darkGray);
+  --color-accent: var(--color-green);
+  --color-accent-variant: var(--color-darkGreen);
+  --color-text: var(--color-black);
+
+  /* Colors */
+  --color-yellow: #fae37e;
+  --color-white: #fffbee;
+  --color-darkGray: #505050;
+  --color-green: #70da91;
+  --color-darkGreen: #52b671;
+  --color-black: #202020;
+}
+
+/* Basic Setting */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+p,
+button,
+div {
+  margin: 0;
+}
+button {
+  background: none;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* main */
+#main {
+  display: flex;
+  background-color: var(--color-primary);
+  padding: 50px;
+  gap: 30px;
+}
+
+/* menus */
+#menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 900px;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 50px;
+  border: 5px solid var(--color-primary-variant);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 400px;
+  border: 3px solid var(--color-primary-variant);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+}
+
+.menu__img-div {
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.menu__img {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+.scale--half {
+  width: 70px;
+}
+
+.menu__price-div {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.menu__price {
+  display: block;
+  margin: 25px auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+  background-color: var(--color-accent);
+  border-radius: 6px;
+  box-shadow: rgba(13, 38, 76, 0.19) 0px 9px 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.menu__price:hover {
+  background-color: var(--color-accent);
+  filter: brightness(0.9);
+}
+.menu__price:active {
+  box-shadow: 0 0 0 1px #82c8a0 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+/* paying */
+#paying {
+  position: relative;
+  width: 400px;
+  border-radius: 20px;
+}
+
+.paying__div {
+  position: sticky;
+  top: 80px;
+}
+
+.price {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-size: 35px;
+  padding: 20px 30px;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+}
+.payment__btn {
+  width: 300px;
+  padding: 20px 30px;
+  margin: 20px 0;
+  background-color: var(--color-green);
+  color: var(--color-text);
+  border-radius: 50px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.payment__btn:hover {
+  background-color: var(--color-accent-variant);
+}
