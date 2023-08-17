@@ -15,7 +15,7 @@
     - [문제점] 제품의 크기가 제각각이다 보니, 이미지의 width와 height의 비율이 다 달랐습니다. 또 제가 수작업으로 배경을 제거하고 resizing 해서 파일의 크기 자체도 제각각이었습니다.
 제품 사진의 비율을 유지하고 싶어서 width만 지정했는데, 특정 이미지(음료수)는 파일 자체의 width가 작고 height가 큰 사진이라 그런지 다른 제품에 비해 크게 보여서 깔끔하지 않았습니다.
 
-    - [시도1, 실패] scale—half라는 선택자에 transform: scale(0.5)를 시도했는데 이미지의 위치가 이상하게 바뀌었습니다 ..😇
+    - [시도1, 실패] 제품 이미지에 scale—half라는 선택자를 추가하고, transform: scale(0.5)를 시도했는데 이미지의 위치가 이상하게 바뀌었습니다 ..😇
       ```html
       <img class="menu__img scale--half" src="images/drink_1.png" alt="drink_coke">
       ```
@@ -47,13 +47,13 @@
         width: 70px;
       }
       ```
-    - [질문] 현업에서도 비율이 제각각인 이미지를 다룰 텐데, 어떻게 하면 비율을 깔끔하게 맞출 수 있나요? 파일의 크기 자체를 비슷하게 맞추는 게 방법일 것 같은데 맞는지 궁금합니다.
+    - [📌질문] 현업에서도 비율이 제각각인 이미지를 다룰 텐데, 어떻게 하면 비율을 깔끔하게 맞출 수 있나요? 파일의 크기 자체를 비슷하게 맞추는 게 방법일 것 같은데 맞는지 궁금합니다.
 
 
 3. 요소를 바닥에서부터 쌓기(?)
-    - 제품의 사진(.과 가격 버튼을 아래에서부터 쌓는 느낌으로 레이아웃을 설계했습니다. (오른쪽에 있는 것 처럼요!)
+    - 제품의 사진(.menu__img-div)과 가격 버튼(.menu__price-div)을 아래에서부터 쌓는 느낌으로 레이아웃을 설계했습니다. (오른쪽에 있는 것 처럼요!)
   
-    - [시도1] display: flex, flex-direction: column-reverse를 시도해봤지만 reverse를 하니 1 → 2 → 3 순서가 아닌 3 → 2 → 1 순서로 쌓여서 설계와 다르게 구현되었습니다.
+    - [시도1] 두 요소의 부모요소인 .menu에 display: flex, flex-direction: column-reverse를 시도해봤지만 reverse를 하니 1 → 2 → 3 순서가 아닌 3 → 2 → 1 순서로 쌓여서 설계와 다르게 구현되었습니다.
       원하는 건 왼쪽인데 오른쪽으로 구현되었습니다 😅
       [이미지 첨부]
       ```html
@@ -73,7 +73,31 @@
       }
       ```
     - 사진과 가격의 부모 요소에 css를 적용해서 해결하고 싶었지만 어떻게 해야 할 지 잘 몰라서..
-    - [시도2, 해결] 결국 position: absolute로 가격 버튼을 바닥에 붙이고, 버튼의 height, margin을 더해서 100px만큼 사진이 바닥에서 떨어져 있다고 하드코딩 했습니다 ..
+    - [시도2, 해결] 결국 가격버튼(.menu__price-div)에 position: absolute로 가격 버튼을 바닥에 붙였습니다. 가격 버튼의 height, margin을 더해 차지하는 영역이 100px임을 구하고, 사진의 영역(.menu__img-div) 높이를 (전체 400px - 가격 영역 100px) = 300px이라고 하드코딩 했습니다 ..
+      ```html
+      <div class="menu">
+          <div class="menu__img-div">
+              <img class="menu__img" src="images/snack_3.png" alt="snack_3">
+          </div>
+          <div class="menu__price-div">
+              <button class="menu__price">2000원</button>
+          </div>
+      </div>
+      ```
+      ```css
+      .menu__img-div {
+        height: 300px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .menu__price-div {
+         width: 100%;
+         position: absolute;
+         bottom: 0;
+      }
+      ```
+      
     - [질문] 어떻게 하면 하드코딩하지 않고 원하는 대로 위치를 지정할 수 있을까요..?🥺
     
 4. html 반복적인 값
