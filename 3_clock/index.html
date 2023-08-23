@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/91a2d12f90.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Clock</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles.css" />
+    <!-- JS -->
+    <script src="assets/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="clock">
+        <div class="battery-container">
+          <i class="fa-solid fa-battery-full battery__icon"></i>
+          <p class="battery"><span class="battery__value">100</span> %</p>
+        </div>
+        <div class="battery__description">
+          💡 배터리가 0%가 되면 시계가 멈춰요!
+        </div>
+        <div class="clock__container">
+          <span class="clock__hour">00</span>:
+          <span class="clock__minute">00</span>:
+          <span class="clock__second">00</span>
+        </div>
+      </section>
+      <section class="alarm">
+        <div class="alarm__add-container">
+          <div class="alarm__add-time">
+            <input type="number" class="alarm__add-hour" />시
+            <input type="number" class="alarm__add-minute" />분
+            <input type="number" class="alarm__add-second" />초
+          </div>
+          <button class="alarm__add-button">추가</button>
+        </div>
+        <ul class="alarm__list"></ul>
+      </section>
+    </main>
+  </body>
+</html>
