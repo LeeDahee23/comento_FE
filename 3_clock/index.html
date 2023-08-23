@@ -18,8 +18,6 @@
     <title>Clock</title>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" />
-    <!-- JS -->
-    <script src="assets/main.js"></script>
   </head>
   <body>
     <main>
@@ -33,27 +31,22 @@
             💡 배터리가 0%가 되면 시계가 멈춰요!
           </span>
         </div>
-        <div class="clock__container">
-          <span class="clock__hour">00</span> :
-          <span class="clock__minute">00</span> :
-          <span class="clock__second">00</span>
-        </div>
+        <div class="clock__container"></div>
       </section>
       <section class="alarm">
         <div class="alarm__add-container">
-          <div class="alarm__add-time">
+          <div class="alarm__add">
             <input type="text" class="alarm__add-hour" placeholder="00" />시
             <input type="text" class="alarm__add-minute" placeholder="00" />분
             <input type="text" class="alarm__add-second" placeholder="00" />초
           </div>
           <button class="alarm__add-button">추가</button>
         </div>
-        <ul class="alarm__list">
-          <li class="alarm__list__item">1시 3분 9초</li>
-          <li class="alarm__list__item">12시 3분 9초</li>
-          <li class="alarm__list__item">12시 3분 9초</li>
-        </ul>
+        <ul class="alarm__list"></ul>
       </section>
     </main>
   </body>
+  <!-- JS -->
+  <script src="assets/clock.js"></script>
+  <script src="assets/alarm.js"></script>
 </html>

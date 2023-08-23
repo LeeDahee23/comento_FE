@@ -42,6 +42,7 @@ main {
   flex-direction: column;
   justify-content: center;
   transform: translateY(-10px);
+  gap: 5px;
 }
 .battery__container {
   display: flex;
@@ -97,13 +98,13 @@ main {
   gap: 10px;
   margin: 0 auto;
 }
-.alarm__add-time {
+.alarm__add {
   background-color: var(--color-primary);
   padding: 5px 10px;
   font-size: 15px;
   border-radius: 4px;
 }
-.alarm__add-time input {
+.alarm__add input {
   width: 20px;
   border: none;
   text-overflow: ellipsis;
@@ -113,7 +114,7 @@ main {
   margin-right: 3px;
   text-align: end;
 }
-.alarm__add-time input::placeholder {
+.alarm__add input::placeholder {
   font-weight: 800;
 }
 .alarm__add-button {
@@ -134,7 +135,18 @@ main {
   gap: 18px;
   font-size: 18px;
 }
-.alarm__list__item {
+.alarm__item {
   padding: 0 8px 8px 8px;
   border-bottom: 1px solid gray;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.alarm__delete-button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 10px;
 }
