@@ -24,29 +24,35 @@
   <body>
     <main>
       <section class="clock">
-        <div class="battery-container">
-          <i class="fa-solid fa-battery-full battery__icon"></i>
-          <p class="battery"><span class="battery__value">100</span> %</p>
-        </div>
-        <div class="battery__description">
-          💡 배터리가 0%가 되면 시계가 멈춰요!
+        <div class="battery__container">
+          <div class="battery">
+            <i class="fa-solid fa-battery-full battery__icon"></i>
+            <p><span class="battery__value">100</span> %</p>
+          </div>
+          <span class="battery__description">
+            💡 배터리가 0%가 되면 시계가 멈춰요!
+          </span>
         </div>
         <div class="clock__container">
-          <span class="clock__hour">00</span>:
-          <span class="clock__minute">00</span>:
+          <span class="clock__hour">00</span> :
+          <span class="clock__minute">00</span> :
           <span class="clock__second">00</span>
         </div>
       </section>
       <section class="alarm">
         <div class="alarm__add-container">
           <div class="alarm__add-time">
-            <input type="number" class="alarm__add-hour" />시
-            <input type="number" class="alarm__add-minute" />분
-            <input type="number" class="alarm__add-second" />초
+            <input type="text" class="alarm__add-hour" placeholder="00" />시
+            <input type="text" class="alarm__add-minute" placeholder="00" />분
+            <input type="text" class="alarm__add-second" placeholder="00" />초
           </div>
           <button class="alarm__add-button">추가</button>
         </div>
-        <ul class="alarm__list"></ul>
+        <ul class="alarm__list">
+          <li class="alarm__list__item">1시 3분 9초</li>
+          <li class="alarm__list__item">12시 3분 9초</li>
+          <li class="alarm__list__item">12시 3분 9초</li>
+        </ul>
       </section>
     </main>
   </body>

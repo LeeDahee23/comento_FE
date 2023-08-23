@@ -1,0 +1,140 @@
+:root {
+  /* App Color */
+  --color-primary: var(--color-white);
+  --color-primary-variant: var(--color-lightblue);
+  --color-accent: var(--color-blue);
+  --color-text: var(--color-black);
+
+  /* Color */
+  --color-blue: #0069e3;
+  --color-lightblue: #d8efff;
+  --color-black: #000;
+  --color-red: #ff0000;
+  --color-white: #fff;
+  --color-green: #79b541;
+  --color-gray: #dbdbdb;
+}
+
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+main {
+  padding: 2rem;
+  display: flex;
+  gap: 35px;
+}
+
+/* clock */
+.clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-10px);
+}
+.battery__container {
+  display: flex;
+}
+.battery {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: default;
+  align-items: center;
+}
+.battery:hover + .battery__description {
+  opacity: 1;
+}
+.battery__icon {
+  color: var(--color-green);
+  width: 30px;
+}
+.battery__description {
+  position: relative;
+  top: 0;
+  left: 10px;
+  opacity: 0;
+  color: var(--color-text);
+  background-color: var(--color-gray);
+  border-radius: 3px;
+
+  padding: 5px 10px;
+  font-size: 11px;
+}
+.clock__container {
+  font-size: 80px;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+/* alarm */
+.alarm {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  width: 250px;
+  height: 190px;
+  background-color: var(--color-primary-variant);
+  border-radius: 8px;
+  gap: 12px;
+}
+.alarm__add-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+.alarm__add-time {
+  background-color: var(--color-primary);
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.alarm__add-time input {
+  width: 20px;
+  border: none;
+  text-overflow: ellipsis;
+  padding: 5px;
+  background-color: transparent;
+  font-weight: 800;
+  margin-right: 3px;
+  text-align: end;
+}
+.alarm__add-time input::placeholder {
+  font-weight: 800;
+}
+.alarm__add-button {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  background-color: var(--color-accent);
+  font-size: 16px;
+  align-items: center;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgb(0, 0, 0, 0.12);
+}
+.alarm__list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 18px;
+  font-size: 18px;
+}
+.alarm__list__item {
+  padding: 0 8px 8px 8px;
+  border-bottom: 1px solid gray;
+}
