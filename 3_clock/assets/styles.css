@@ -105,14 +105,14 @@ main {
   border-radius: 4px;
 }
 .alarm__add input {
-  width: 20px;
+  width: 30px;
   border: none;
   text-overflow: ellipsis;
   padding: 5px;
   background-color: transparent;
   font-weight: 800;
   margin-right: 3px;
-  text-align: end;
+  text-align: center;
 }
 .alarm__add input::placeholder {
   font-weight: 800;
@@ -131,9 +131,14 @@ main {
 .alarm__list {
   display: flex;
   flex-direction: column;
+  width: 220px;
+  height: 100%;
   padding: 10px;
+  margin: 0 auto;
   gap: 18px;
   font-size: 18px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
 }
 .alarm__item {
   padding: 0 8px 8px 8px;

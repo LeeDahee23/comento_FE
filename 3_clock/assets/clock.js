@@ -2,7 +2,6 @@
 let battery = 100;
 function setBattery() {
   const battery_value = document.querySelector('.battery__value');
-
   const clock_container = document.querySelector('.clock__container');
 
   if (battery > 0) {
