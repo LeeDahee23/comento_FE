@@ -6,28 +6,57 @@
     <title>Join</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/join.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
     <!-- JS -->
     <script src="./assets/js/join.js"></script>
   </head>
   <body>
+    <header id="header">
+      <h1 class="header__title">회원가입</h1>
+    </header>
     <form action="" class="form-join">
       <main id="main">
         <div class="main__id">
           <label for="id">아이디<span class="essential-mark">*</span></label>
-          <input type="text" class="id__input" name="id">
-          <button class="btn-check-id">중복 검사</button>
+          <div class="main__id__div">
+            <input type="text" class="id__input" id="id" />
+            <button class="btn-check-id">중복 검사</button>
+          </div>
+          <p class="id__validation-description"></p>
         </div>
         <div class="main__password">
-          <label for="password">비밀번호<span class="essential-mark">*</span></label>
-          <input type="password" class="password__input" name="password">
+          <label for="password">
+            비밀번호<span class="essential-mark">*</span>
+          </label>
+          <input
+            type="password"
+            class="password__input"
+            id="password"
+            placeholder="영문, 숫자의 조합으로 8자리 이상"
+          />
+          <p class="password__validation-description"></p>
         </div>
         <div class="main__phone">
-          <label for="phone">핸드폰 번호<span class="essential-mark">*</span></label>
-          <input type="tel" class="phone__input" name="phone">
+          <label for="phone">
+            핸드폰 번호<span class="essential-mark">*</span>
+          </label>
+          <input
+            type="tel"
+            class="phone__input"
+            id="phone"
+            placeholder="010-0000-0000"
+          />
+          <p class="phone__validation-description"></p>
         </div>
       </main>
       <footer id="footer">
-        <input type="submit" class="footer__submit" value="가입하기"></input>
+        <input type="submit" class="footer__submit" value="가입하기" />
       </footer>
     </form>
   </body>

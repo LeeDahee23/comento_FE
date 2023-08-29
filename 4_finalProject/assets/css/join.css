@@ -1,0 +1,130 @@
+:root {
+  /* App Colors */
+  --color-primary: var(--color-white);
+  --color-accent: var(--color-blue);
+  --color-text: var(--color-black);
+
+  /* Colors */
+  --color-blue: #1b72e8;
+  --color-red: #d34141;
+  --color-green: #1baa1b;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #4d4d4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 450px;
+  padding: 50px 40px;
+  border: 1px solid black;
+}
+
+/* header */
+#header {
+  margin-bottom: 20px;
+}
+.header__title {
+  font-size: 26px;
+}
+
+/* main */
+#main {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.main__id {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 6px;
+}
+.main__id__div {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+.id__input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 16px;
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+}
+.btn-check-id {
+  width: 90px;
+  line-height: 20px;
+  padding: 5px 7px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+}
+.btn-check-id:hover {
+  cursor: pointer;
+}
+
+.main__password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 6px;
+}
+.password__input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 16px;
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+}
+
+.main__phone {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 6px;
+}
+.phone__input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 16px;
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+}
+
+.essential-mark {
+  color: var(--color-red);
+}
+.warning {
+  color: var(--color-red);
+}
+.correct {
+  color: var(--color-green);
+}
+
+/* footer */
+#footer {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+.footer__submit {
+  width: 100%;
+  padding: 15px 0;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.footer__submit:hover {
+  cursor: pointer;
+}
