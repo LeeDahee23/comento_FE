@@ -9,5 +9,26 @@
     <!-- JS -->
     <script src="./assets/js/join.js"></script>
   </head>
-  <body></body>
+  <body>
+    <form action="" class="form-join">
+      <main id="main">
+        <div class="main__id">
+          <label for="id">아이디<span class="essential-mark">*</span></label>
+          <input type="text" class="id__input" name="id">
+          <button class="btn-check-id">중복 검사</button>
+        </div>
+        <div class="main__password">
+          <label for="password">비밀번호<span class="essential-mark">*</span></label>
+          <input type="password" class="password__input" name="password">
+        </div>
+        <div class="main__phone">
+          <label for="phone">핸드폰 번호<span class="essential-mark">*</span></label>
+          <input type="tel" class="phone__input" name="phone">
+        </div>
+      </main>
+      <footer id="footer">
+        <input type="submit" class="footer__submit" value="가입하기"></input>
+      </footer>
+    </form>
+  </body>
 </html>
