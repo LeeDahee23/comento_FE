@@ -58,7 +58,7 @@ function paintItem(newItem) {
 function deleteTodo(e) {
   const li = e.currentTarget.parentElement;
   li.remove();
-  todosArr = todosArr.filter((todo) => todo.id !== parseInt(li.id)); // 수정? 이해?
+  todosArr = todosArr.filter((todo) => todo.id !== parseInt(li.id)); // 참고
 }
 
 // check

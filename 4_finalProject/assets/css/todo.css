@@ -11,7 +11,7 @@
   --color-ivory: #faf3f0;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray: #7a7a7a;
+  --color-gray: #9c9c9c;
 }
 
 /* Common */
@@ -111,5 +111,6 @@ body {
 }
 .complete {
   text-decoration: line-through;
+  font-style: italic;
   color: var(--color-gray);
 }
