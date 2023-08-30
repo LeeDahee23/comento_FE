@@ -114,12 +114,6 @@ a {
 .essential-mark {
   color: var(--color-red);
 }
-.warning {
-  color: var(--color-red);
-}
-.correct {
-  color: var(--color-green);
-}
 
 /* footer */
 #footer {
