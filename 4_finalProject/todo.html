@@ -6,8 +6,27 @@
     <title>To do List</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/todo.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
     <!-- JS -->
-    <script src="./assets/js/todo.js"></script>
+    <script src="./assets/js/todo.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header id="header">
+      <h1 class="header__title">To do List</h1>
+    </header>
+    <main id="main">
+      <form action="" class="main__addTodo">
+        <input type="text" class="addTodo__content" />
+        <input type="submit" class="addTodo__submit" value="추가" />
+      </form>
+
+      <ul class="todo__list"></ul>
+    </main>
+  </body>
 </html>
