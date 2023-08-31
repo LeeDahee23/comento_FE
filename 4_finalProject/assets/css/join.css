@@ -137,3 +137,10 @@ a {
   background-color: var(--color-gray);
   color: var(--color-text);
 }
+
+.possible {
+  color: var(--color-green);
+}
+.impossible {
+  color: var(--color-red);
+}

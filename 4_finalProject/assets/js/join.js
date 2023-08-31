@@ -24,6 +24,8 @@ function validation(e) {
   console.log(allEnterCheck, isCheckedDup, duplicateCheck, passwordCheck);
   if (!allEnterCheck) {
     alert('필수 항목을 모두 입력해주세요.');
+  } else if (!isCheckedDup || duplicateCheck) {
+    alert('아이디 중복검사는 반드시 진행해야 합니다.');
   } else if (
     allEnterCheck &&
     isCheckedDup &&
@@ -49,7 +51,9 @@ function isDuplicate() {
 
   if (isNull(id_value)) {
     id_des.textContent = '아이디를 입력하세요';
-    id_des.style.color = '#d34141';
+    // id_des.style.color = '#d34141';
+    id_des.classList.remove('possible');
+    id_des.classList.add('impossible');
   } else {
     userArr.forEach((user) => {
       if (user.id === id_value) {
@@ -74,10 +78,14 @@ function paintDuplicateCheck(check) {
   console.log(check);
   if (check) {
     id_des.textContent = '이미 사용중인 아이디입니다.';
-    id_des.style.color = '#d34141';
+    // id_des.style.color = '#d34141';
+    id_des.classList.remove('possible');
+    id_des.classList.add('impossible');
   } else {
     id_des.textContent = '사용 가능한 아이디입니다.';
-    id_des.style.color = '#1baa1b';
+    // id_des.style.color = '#1baa1b';
+    id_des.classList.remove('impossible');
+    id_des.classList.add('possible');
   }
 }
 
@@ -96,7 +104,7 @@ function isEnteredAll() {
   }
 }
 function isNull(str) {
-  if (str.length === 0) {
+  if (str.length <= 0) {
     return true;
   } else return false;
 }
@@ -104,11 +112,10 @@ function isNull(str) {
 // 유효성 검사(password, 영문, 숫자, 특수문자의 조합으로 8자리 이상)
 function isValidPassword() {
   const password = document.querySelector('.password__input').value;
-  const passwordRule =
-    /^[A-Za-z0-9`\-=\\\[\];',\./~!@#\$%\^&\*\(\)_\+|\{\}:"<>\?]{8,16}$/;
+  const passwordRule = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
   let validPasswordResult = true;
 
-  if (password.length < 8) {
+  if (isNull(password)) {
     validPasswordResult = false;
   }
 
@@ -126,7 +133,9 @@ function paintPasswordCheck(check) {
 
   if (!check) {
     password_des.textContent = '8~16자 영문, 숫자, 특수문자를 사용하세요.';
-    password_des.style.color = '#d34141';
+    // password_des.style.color = '#d34141';
+    password_des.classList.remove('possible');
+    password_des.classList.add('impossible');
   } else {
     password_des.textContent = '';
   }
